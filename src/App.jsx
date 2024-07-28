@@ -6,7 +6,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 
 function App() {
 	return (
-		<BrowserRouter>
+		<>
 			<Routes>
 				<Route path="/" element={<Layout/>}>
 					<Route index element={<LoginPage/>}/>
@@ -14,7 +14,7 @@ function App() {
 					<Route path="*" element={<NotFoundPage/>}/>
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</>
 	)
 }
 
