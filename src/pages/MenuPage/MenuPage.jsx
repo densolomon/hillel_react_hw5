@@ -10,8 +10,9 @@ const MenuPage = () => {
 
 	useEffect(() => {
 		if (pizzaName) {
+			const keys = ["name"];
 			const filteredPizzasList = pizzas.filter((pizza) =>
-				pizza.name.toLowerCase().includes(pizzaName.toLowerCase())
+				keys.some((key) => pizza[key].toLowerCase().includes(pizzaName.toLowerCase()))
 			);
 			setPizzasList(filteredPizzasList);
 		} else {
